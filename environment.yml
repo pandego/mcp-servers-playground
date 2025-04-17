@@ -1,0 +1,10 @@
+name: mcp-server
+
+channels:
+  - defaults
+
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - poetry==2
