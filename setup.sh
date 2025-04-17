@@ -47,7 +47,13 @@ sed -i '' "s|<puppeteer-allow-dangerous>|${PUPPETEER_ALLOW_DANGEROUS}|g" mcp_ser
 echo "\n==========[ DOCKER IMAGES ]=========="
 echo "Building Docker images..."
 
-cd modelcontextprotocol/servers
+# --- Notion --- #
+git clone https://github.com/makenotion/notion-mcp-server.git
+cd notion-mcp-server
+docker compose build
+
+# --- Maintained Servers --- #
+cd ../modelcontextprotocol/servers
 docker build -t mcp/puppeteer -f src/puppeteer/Dockerfile .
 docker build -t mcp/memory -f src/memory/Dockerfile .
 docker build -t mcp/sequentialthinking -f src/sequentialthinking/Dockerfile .

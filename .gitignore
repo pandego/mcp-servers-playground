@@ -75,3 +75,5 @@ cf_api_token.txt
 
 # MCP servers config (leave the example file only)
 mcp_servers_config.json
+claude_mcp_servers_config.json
+windsurf_mcp_servers_config.json
