@@ -78,7 +78,7 @@ If you prefer to set up the submodules manually, follow these steps:
 
 ## How to setup git submodules
 
-This is just for reference, you can skip this section. This is how I added the submodules to this repository:
+***This is just for reference***, you can skip this section. This is how I added the submodules to this repository:
 
 1. Create the `modelcontextprotocol` directory:
 
