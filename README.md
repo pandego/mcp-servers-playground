@@ -1,8 +1,8 @@
 # MCP Servers Playground
 
-This repository demonstrates how to integrate the three [ModelContextProtocol SDK](https://github.com/modelcontextprotocol) repositories as Git submodules under the `modelcontextprotocol` directory so that you can use them.
+This repository demonstrates how to integrate three ModelContextProtocol SDK repositories from the [Model Context Protocol - Open Protocol](https://modelcontextprotocol.io/introduction) as Git submodules under the `modelcontextprotocol` directory so that you can use them.
 
-The reason I created this with its submodules is to have a context base for when developing a new MCP server. This will provide a sort of *memory* of the SDKs and servers to any AI tool that may be used to develop a new MCP server.
+The reason I created this with its submodules is to have a context base for when developing a new MCP server. This will provide a sort of *memory* of the SDKs and servers to any AI tool that may be used to facilitate or assist the development of a new MCP server.
 
 ## Repositories
 
