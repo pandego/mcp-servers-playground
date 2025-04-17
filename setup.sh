@@ -33,7 +33,6 @@ sed -i '' "s|<searxng-url>|${SEARXNG_URL}|g" mcp_servers_config.json
 
 # --- Memory --- #
 sed -i '' "s|<memory-file-path>|${MEMORY_FILE_PATH}|g" mcp_servers_config.json
-sed -i '' "s|<memory-folder-path>|${MEMORY_FOLDER_PATH}|g" mcp_servers_config.json
 
 # --- Puppeteer --- #
 sed -i '' "s|<puppeteer-browser-path>|${PUPPETEER_BROWSER_PATH}|g" mcp_servers_config.json
@@ -48,7 +47,11 @@ echo "\n==========[ DOCKER IMAGES ]=========="
 echo "Building Docker images..."
 
 # --- Notion --- #
-git clone https://github.com/makenotion/notion-mcp-server.git
+if [ -d "notion-mcp-server" ]; then
+    echo "Notion repository already exists. Skipping..."
+else
+    git clone https://github.com/makenotion/notion-mcp-server.git
+fi
 cd notion-mcp-server
 docker compose build
 

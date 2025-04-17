@@ -64,7 +64,7 @@
         "run",
         "-i",
         "-v",
-        "<memory-folder-path>:/app/dist",
+        "mcp-memory:/app/dist",
         "--rm",
         "mcp/memory"
       ]
