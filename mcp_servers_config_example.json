@@ -1,13 +1,16 @@
 {
-    "mcpServers": {
-      "notionApi": {
-        "command": "npx",
-        "args": ["-y", "@notionhq/notion-mcp-server"],
-        "env": {
-          "OPENAPI_MCP_HEADERS": "{\"Authorization\": \"Bearer <notion-token>\", \"Notion-Version\": \"<notion-version>\" }"
-        }
-      },
-      "searxng": {
+  "mcpServers": {
+    "notionApi": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@notionhq/notion-mcp-server"
+      ],
+      "env": {
+        "OPENAPI_MCP_HEADERS": "{\"Authorization\": \"Bearer <notion-token>\", \"Notion-Version\": \"<notion-version>\" }"
+      }
+    },
+    "searxng": {
       "command": "npx",
       "args": [
         "-y",
@@ -46,11 +49,21 @@
     },
     "memory-container": {
       "command": "docker",
-      "args": ["run", "-i", "-v", "<memory-folder-path>:/app/dist", "--rm", "mcp/memory"]
+      "args": [
+        "run",
+        "-i",
+        "-v",
+        "<memory-folder-path>:/app/dist",
+        "--rm",
+        "mcp/memory"
+      ]
     },
     "puppeteer": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ],
       "env": {
         "PUPPETEER_LAUNCH_OPTIONS": "{ \"headless\": false, \"executablePath\": \"<puppeteer-browser-path>\", \"args\": [] }",
         "ALLOW_DANGEROUS": "<puppeteer-allow-dangerous>"
@@ -58,7 +71,15 @@
     },
     "puppeteer-container": {
       "command": "docker",
-      "args": ["run", "-i", "--rm", "--init", "-e", "DOCKER_CONTAINER=true", "mcp/puppeteer"]
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--init",
+        "-e",
+        "DOCKER_CONTAINER=true",
+        "mcp/puppeteer"
+      ]
     }
   }
 }
