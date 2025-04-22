@@ -15,6 +15,9 @@ if [ ! -f .env ]; then
 fi
 . .env
 
+echo "Updating main repo and submodules..."
+git pull --recurse-submodules && git submodule update --remote --merge
+
 
 # ------------------------------------------------ #
 # --- 2. Add Secrets to the MCP Servers Config --- #
@@ -54,6 +57,9 @@ else
 fi
 cd notion-mcp-server
 docker compose build
+
+# --- Context7 --- #
+docker build -t context7-mcp:latest https://github.com/upstash/context7.git#master
 
 # --- Maintained Servers --- #
 cd ../modelcontextprotocol/servers

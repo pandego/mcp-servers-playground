@@ -91,6 +91,17 @@
         "DOCKER_CONTAINER=true",
         "mcp/puppeteer"
       ]
+    },
+    "context7-container": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "-v",
+        "windsurf-context7-mcp:/app/.cache",
+        "context7-mcp:latest"
+      ]
     }
   }
 }
